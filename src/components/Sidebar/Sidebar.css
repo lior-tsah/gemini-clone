@@ -19,7 +19,7 @@
 }
 
 .sidebar .new-chat{
-    margin-top: 10px;
+    margin-top: 50px;
     display: inline-block;
     align-items: center;
     gap: 10px;
@@ -63,5 +63,6 @@
 }
 
 .sidebar .bottom-item{
-    
+    padding-right: 10px;
+    cursor: pointer;
 }
