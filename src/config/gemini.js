@@ -8,7 +8,7 @@ import {
   const MODEL_NAME = "gemini-1.5-pro-latest";
 
   // const API_KEY = process.env.REACT_APP_API_KEY; copy paste actuall api key to run locally
-  
+  const API_KEY = "AIzaSyAvyd6okY3FPt4fVdEKYh0ZLcuN-gMCeCg";
   
   
   async function runChat(prompt) {

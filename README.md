@@ -1,11 +1,21 @@
-# React + Vite
-
-Project - Creating a Gemini Clone
 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gemini Clone
 
-Currently, two official plugins are available:
+## Description
+Gemini Clone is a project that aims to replicate the functionality of the Gemini platform's user interface for chat applications. It utilizes the Gemini API to fetch data and stores user data and chat history, and provides a user-friendly interface for accessing and managing saved chats.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+To run the Gemini Clone project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jvishal454/gemini-clone.git
+
+   cd gemini-clone
+
+   npm install 
+
+   set or export your gemini API Key
+
+   npm run dev
