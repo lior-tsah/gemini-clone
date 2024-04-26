@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div className='main'>
         <div className="nav">
-            <p>Gemini</p>
+            <p>Gemini Pro</p>
             <img src={assets.user_icon} alt="" />
         </div>
         <div className="main-container">
@@ -68,11 +68,12 @@ const Main = () => {
                 <div>
                     <img src={assets.gallery_icon} alt="" />
                     <img src={assets.mic_icon} alt="" />
-                    <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+                    { input ? <img onClick={() => onSent()} src={assets.send_icon} alt="" /> : null }
                 </div>
             </div>
             <p className='bottom-info'>
-                Gemini may display innacurate info, including about people, so double-check its responses. Your privacy and Gemini Apps.
+                
+                This is Gemini Pro Clone created in React.js, no data is retained after a session, so kindly copy your data.
             </p>
             </div>
         </div>

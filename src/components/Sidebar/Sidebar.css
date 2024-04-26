@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #f0f4f9;
-    padding: 25px 15px;
+    padding: 25px 18px;
 }
 
 .sidebar img{
@@ -20,9 +20,10 @@
 
 .sidebar .new-chat{
     margin-top: 50px;
-    display: inline-block;
+    display: flex;
     align-items: center;
     gap: 10px;
+    /* width: fit-content; */
     padding: 10px 15px;
     background-color: #e6eaf1;
     border-radius: 50px;
@@ -34,7 +35,7 @@
 .sidebar .recent {
     display: flex;
     flex-direction: column;
-    
+    animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-title{
@@ -65,4 +66,10 @@
 .sidebar .bottom-item{
     padding-right: 10px;
     cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .sidebar{
+        display: none;
+    }
 }
