@@ -38,7 +38,7 @@ To run the Gemini Clone project locally, follow these steps:
 
 ## Prompt Loading Screen
 
-![first screen](screens/gemini-clone-prompt.PNG)
+![prompt loading screen](screens/gemini-clone-loading.PNG)
 
 
 ## Chat Prompt Screen
