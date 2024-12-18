@@ -1,15 +1,21 @@
-import React from 'react'
+/*App.js*/
+
+import React, { useState, useEffect } from 'react';
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import "./assets/App.css";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './components/Sidebar/Sidebar'
 import Main from './components/Main/Main'
+import Wrapper from './Wrapper/Wrapper';
 
 
-const App = () => {
+export default function App() {
   return (
-    <>
-      <Sidebar />
+    <Wrapper>
       <Main />
-    </>
+    </Wrapper>
   )
-}
 
-export default App
+}

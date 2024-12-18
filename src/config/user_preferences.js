@@ -1,40 +1,12 @@
 import axios from 'axios'
 
-const CLOUD_RUN_URL = '/func'
+const CLOUD_RUN_URL = '/user-pref'
 
 
-const toBase64 = file => new Promise((resolve, reject) => {
-  const reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onload = () => resolve(reader.result);
-  reader.onerror = reject;
-});
-async function runChat(prompt, file, imagePreviewUrl, history) {
-  let pHist = history
-  if (history) { }
-  else
-    pHist = []
-
-
-  const textPart = { text: prompt };
-  var msg = { "message": [textPart], "history": history }
-  if (file) {
-    var base64Image = await toBase64(file)
-    //console.log(base64Image)
-    base64Image = base64Image.substring(base64Image.indexOf(",") + 1)
-    //console.log(base64Image)
-
-    var inlineData = {
-      "inlineData": {
-        "mimeType": file.type,
-        "data": base64Image
-      }
-    };
-    msg = { "message": [inlineData, textPart] }
-  }
-  console.log("Gemini request", msg)
+async function userPreferences(method, storeHistory) {
+  var msg = { "method": method, "store_history": storeHistory }
+  console.log("Get user preferences", msg)
   axios.defaults.withCredentials = true
-
   var res = await axios.post(CLOUD_RUN_URL, msg).catch(function (error) {
     let debug = { "debug": msg }
     if (error.response) {
@@ -58,11 +30,8 @@ async function runChat(prompt, file, imagePreviewUrl, history) {
 
     }
   });
-  console.log("Gemini Results", res)
-  if (res.error)
-    return res
-  res.data["msg"] = msg;
-  return res.data
+  console.log("User Preferences Results", res)
+  return res
 }
 
-export default runChat;
+export default userPreferences;
